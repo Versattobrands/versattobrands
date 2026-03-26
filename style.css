@@ -927,3 +927,18 @@ h1 strong, h2 strong, h3 strong {
     color: var(--accent-color);
     font-weight: 700;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
