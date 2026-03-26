@@ -1,1 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Briefing | Versatto Brands</title>
+    <meta name="description" content="Formulário para Proposta de Investimento. O primeiro passo para entender melhor os desafios e objetivos do seu projeto.">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .form-page {
+            padding: 12rem 0 8rem;
+            min-height: 100vh;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 6rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .form-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .briefing-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 4rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-section {
+            margin-bottom: 4rem;
+        }
+
+        .form-section h2 {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent-color);
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 0 4px rgba(161, 130, 105, 0.1);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 4L6 8L10 4' stroke='%23CBCBC4' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            padding-right: 3.5rem;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .form-page {
+                padding: 8rem 0 4rem;
+            }
+            
+            .form-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .briefing-form {
+                padding: 2rem;
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo">Versatto Brands</a>
+            
+            <div class="header-actions">
+                <nav class="nav-menu">
+                    <a href="../index.html#sobre" class="nav-link" data-i18n="nav_sobre">SOBRE</a>
+                    <a href="../portfolio.html" class="nav-link" data-i18n="nav_portfolio">PORTFÓLIO</a>
+                    <a href="index.html" class="nav-link active" data-i18n="nav_contato">CONTATO</a>
+                </nav>
+                <div class="lang-switch">
+                    <span class="active" data-lang="pt">PT</span> | <span data-lang="en">EN</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-page">
+        <div class="container">
+            <div class="form-header">
+                <span class="uppercase-label" data-i18n="contact_hero_label">PRÉ-BRIEFING</span>
+                <h1 data-i18n="contact_hero_title">Formulário para Proposta de Investimento</h1>
+                <p data-i18n="contact_hero_subtitle">Este formulário é o primeiro passo para entender melhor os desafios e objetivos do projeto.</p>
+            </div>
+
+            <form class="briefing-form">
+                <!-- SEÇÃO 1: DADOS DE CONTATO -->
+                <div class="form-section">
+                    <h2 data-i18n="contact_sec1_title">01. DADOS DE CONTATO</h2>
+                    
+                    <div class="form-group">
+                        <label for="nome" data-i18n="contact_name_label">Qual é o seu nome completo?</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome aqui" data-i18n="contact_name_placeholder" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact_email_label">Informe seu melhor email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="exemplo@empresa.com" data-i18n="contact_email_placeholder" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp" data-i18n="contact_whatsapp_label">Whatsapp com DDD (opcional)</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="(00) 00000-0000" data-i18n="contact_whatsapp_placeholder">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instagram" data-i18n="contact_insta_label">Instagram da sua empresa (se houver)</label>
+                        <input type="text" id="instagram" name="instagram" class="form-control" placeholder="@suaempresa" data-i18n="contact_insta_placeholder">
+                    </div>
+                </div>
+
+                <!-- SEÇÃO 2: DADOS DA EMPRESA -->
+                <div class="form-section">
+                    <h2 data-i18n="contact_sec2_title">02. DADOS DA EMPRESA</h2>
+                    
+                    <div class="form-group">
+                        <label for="empresa" data-i18n="contact_company_label">Nome da sua empresa?</label>
+                        <input type="text" id="empresa" name="empresa" class="form-control" placeholder="Nome da empresa" data-i18n="contact_company_placeholder" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="funcionarios" data-i18n="contact_employees_label">Quantos funcionários sua empresa possui atualmente?</label>
+                        <select id="funcionarios" name="funcionarios" class="form-control" required>
+                            <option value="" disabled selected data-i18n="contact_select_option">Selecione uma opção</option>
+                            <option value="1-5" data-i18n="contact_employees_1_5">1 a 5 funcionários</option>
+                            <option value="6-20" data-i18n="contact_employees_6_20">6 a 20 funcionários</option>
+                            <option value="21-50" data-i18n="contact_employees_21_50">21 a 50 funcionários</option>
+                            <option value="50+" data-i18n="contact_employees_50plus">Mais de 50 funcionários</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicos" data-i18n="contact_services_label">Quais produtos ou serviços sua empresa oferece?</label>
+                        <input type="text" id="servicos" name="servicos" class="form-control" placeholder="Ex: Consultoria, E-commerce, etc." data-i18n="contact_services_placeholder" required>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO 3: INFORMAÇÕES FINAIS -->
+                <div class="form-section">
+                    <h2 data-i18n="contact_sec3_title">03. INFORMAÇÕES FINAIS</h2>
+                    
+                    <div class="form-group">
+                        <label for="origem" data-i18n="contact_origin_label">Como nos encontrou?</label>
+                        <select id="origem" name="origem" class="form-control" required>
+                            <option value="" disabled selected data-i18n="contact_select_option">Selecione uma opção</option>
+                            <option value="indicacao" data-i18n="contact_origin_referral">Indicação</option>
+                            <option value="instagram" data-i18n="contact_origin_insta">Instagram</option>
+                            <option value="linkedin" data-i18n="contact_origin_linkedin">LinkedIn</option>
+                            <option value="google" data-i18n="contact_origin_google">Google</option>
+                            <option value="outros" data-i18n="contact_origin_others">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="faturamento" data-i18n="contact_revenue_label">Qual faturamento mensal da sua empresa?</label>
+                        <select id="faturamento" name="faturamento" class="form-control" required>
+                            <option value="" disabled selected data-i18n="contact_select_option">Selecione uma opção</option>
+                            <option value="ate-50k" data-i18n="contact_revenue_up_50k">Até R$ 50k</option>
+                            <option value="50k-200k" data-i18n="contact_revenue_50k_200k">R$ 50k - R$ 200k</option>
+                            <option value="200k-1m" data-i18n="contact_revenue_200k_1m">R$ 200k - R$ 1M</option>
+                            <option value="acima-1m" data-i18n="contact_revenue_above_1m">Acima de R$ 1M</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desafios" data-i18n="contact_challenges_label">Fale um pouco sobre a sua empresa e os principais desafios que enfrentam hoje</label>
+                        <textarea id="desafios" name="desafios" class="form-control" placeholder="Descreva brevemente seus objetivos e dores atuais..." data-i18n="contact_challenges_placeholder" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary" data-i18n="contact_btn_send">Enviar Proposta</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="logo" style="margin-bottom: 2rem; display: block;">Versatto Brands</a>
+                    <p data-i18n="footer_desc">Consultoria Estratégica de Branding.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_local">LOCAL</h4>
+                    <p>Goiás, Brasil</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_contact">CONTATO</h4>
+                    <a href="mailto:contato@versattobrands.com">contato@versattobrands.com</a>
+                    <a href="tel:+5562991498910" style="display: block; margin-top: 0.5rem;">+55 62 99149-8910</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_social">SOCIAL</h4>
+                    <a href="https://www.linkedin.com/in/versattobrands/" target="_blank">LinkedIn</a>
+                    <a href="https://www.instagram.com/versattobrands/" target="_blank">Instagram</a>
+                    <a href="https://www.behance.net/versattobrands" target="_blank">Behance</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_rights">&copy; 2026 Versatto Brands. Todos os direitos reservados.</p>
+                <p data-i18n="footer_tagline">Premium Branding Consultancy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Simple form submission mock
+        document.querySelector('.briefing-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'ENVIANDO...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Obrigado! Recebemos suas informações e entraremos em contato em breve.');
+                btn.innerText = originalText;
+                btn.disabled = false;
+                this.reset();
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
 
